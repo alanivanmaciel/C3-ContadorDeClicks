@@ -15,7 +15,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
       <h1>Cantidad de clicks: {clicks} </h1>
       <button onClick={handleClickSuma} style={{ border: 'solid 3px', padding: '10px' }}>
         <h1>Sumar</h1>
