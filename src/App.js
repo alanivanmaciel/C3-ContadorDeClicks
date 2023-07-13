@@ -5,18 +5,23 @@ import './style.css';
 export default function App() {
   const [clicks, setClicks] = useState(0);
 
-  function handleClick() {
+  function handleClickSuma() {
     setClicks(clicks + 1);
     //setClicks( estado => estado + 1)
   }
 
+  function handleClickResta() {
+    setClicks(clicks - 1);
+  }
+
   return (
     <div>
-      <button onClick={handleClick} style={{ border: 'solid 3px', padding: '20px' }}>
-        <h1>Sumar: {clicks}</h1>
+      <h1>Cantidad de clicks: {clicks} </h1>
+      <button onClick={handleClickSuma} style={{ border: 'solid 3px', padding: '10px' }}>
+        <h1>Sumar</h1>
       </button>
-      <button onClick={handleClick} style={{ border: 'solid 3px', padding: '20px', marginLeft: '10px' }}>
-        <h1>Restar: {clicks}</h1>
+      <button onClick={handleClickResta} style={{ border: 'solid 3px', padding: '10px', marginLeft: '10px' }}>
+        <h1>Restar</h1>
       </button>
     </div>
   );
