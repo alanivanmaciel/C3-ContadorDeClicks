@@ -11,7 +11,9 @@ export default function App() {
   }
 
   function handleClickResta() {
-    setClicks(clicks - 1);
+    if (clicks > 1) {
+      setClicks(clicks - 1);
+    }
   }
 
   return (
